@@ -1,6 +1,6 @@
 const RatingBtn = ({ selectedRating, onHandleRating, value }) => {
     const classes = `rating ${
-        (+selectedRating === value && "selected choice") || ""
+        (Number(selectedRating) === value && "selected choice") || ""
     }`;
 
     return (
