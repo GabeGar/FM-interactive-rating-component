@@ -37,7 +37,7 @@
     line-height: 1.4;
     font-family: Overpass;
     background-image: linear-gradient(45deg, #121417 5%, #252d37 100%);
-    border-radius: 20px;
+    border-radius: 1.2em;
     padding: 2rem;
 }
 
@@ -103,7 +103,7 @@
     letter-spacing: .125rem;
     text-transform: uppercase;
     border: none;
-    border-radius: 2rem;
+    border-radius: 2em;
     color: var(--White);
     background-color: var(--Orange);
 }
@@ -146,6 +146,6 @@
     }
 
     .ratings {
-        gap: 1rem;
+        justify-content: space-between;
     }
 }
