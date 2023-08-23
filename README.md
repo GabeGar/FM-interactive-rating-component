@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Github](https://github.com/GabeGar/FM-interactive-rating-component)
--   Live Site URL: [GH-Pages]()
+-   Live Site URL: [GH-Pages](https://gabegar.github.io/FM-interactive-rating-component/)
 
 ## My process
 
