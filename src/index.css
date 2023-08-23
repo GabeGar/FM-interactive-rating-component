@@ -14,6 +14,9 @@
     /* *General Styling */
     --circular-bg-height-n-width: 3em;
     --para-n-button-font: 1.05em;
+
+    /* *Active State Styling */
+    --desktop-form-btns-transition: all ease-in-out 0.15s;
 }
 
 * {
@@ -22,7 +25,7 @@
     box-sizing: border-box;
 }
 
-/* * Form State */
+/* * Form styles */
 
 .page {
     min-height: 100dvh;
@@ -85,10 +88,16 @@
     outline: none;
     border: none;
     color: var(--Light-Grey);
+    transition: var(--desktop-form-btns-transition);
 }
 
 .rating {
     flex: 1
+}
+
+.selected.choice {
+    background-color: var(--Orange);
+    color: var(--White);
 }
 
 .action {
@@ -106,9 +115,10 @@
     border-radius: 2em;
     color: var(--White);
     background-color: var(--Orange);
+    transition: var(--desktop-form-btns-transition);
 }
 
-/* *Thank You State */
+/* *Thank you styles */
 
 .content>section.thank-you {
     display: flex;
@@ -138,9 +148,21 @@
     color: var(--Light-Grey);
 }
 
-/* *Desktop state */
+/* *Desktop styles & states */
 
 @media (min-width: 400px) {
+
+    .ratings>button:hover {
+        font-weight: 700;
+        color: var(--White);
+        background-color: var(--Light-Grey);
+    }
+
+    .submit:hover {
+        color: var(--Orange);
+        background-color: var(--White);
+    }
+
     .card {
         max-width: 400px;
     }

@@ -1,14 +1,15 @@
 import { useState } from "react";
 
-import StarIcon from "./components/StarIcon.jsx";
-import ThankYouIllustration from "./components/ThankYouIllustration.jsx";
+import StarIcon from "./components/StarIcon";
+import ThankYouIllustration from "./components/ThankYouIllustration";
+import RatingBtn from "./components/RatingBtn";
 
 const App = () => {
-    const [selectedRating, setSelectedRating] = useState("");
+    const [selectedRating, setSelectedRating] = useState(null);
     const [hasSubmitted, setHasSubmitted] = useState(false);
 
     const handleRating = (e) => {
-        setSelectedRating(e.target.value.toString());
+        setSelectedRating(e.target.value);
     };
 
     const handleSubmit = () => {
@@ -33,41 +34,17 @@ const App = () => {
                                 improve our offering!
                             </p>
                             <section className="ratings">
-                                <button
-                                    className="rating"
-                                    onClick={handleRating}
-                                    value={1}
-                                >
-                                    1
-                                </button>
-                                <button
-                                    className="rating"
-                                    onClick={handleRating}
-                                    value={2}
-                                >
-                                    2
-                                </button>
-                                <button
-                                    className="rating"
-                                    onClick={handleRating}
-                                    value={3}
-                                >
-                                    3
-                                </button>
-                                <button
-                                    className="rating"
-                                    onClick={handleRating}
-                                    value={4}
-                                >
-                                    4
-                                </button>
-                                <button
-                                    className="rating"
-                                    onClick={handleRating}
-                                    value={5}
-                                >
-                                    5
-                                </button>
+                                {Array.from({ length: 5 }).map((_, i) => {
+                                    const value = i + 1;
+                                    return (
+                                        <RatingBtn
+                                            key={value}
+                                            selectedRating={selectedRating}
+                                            onHandleRating={handleRating}
+                                            value={value}
+                                        />
+                                    );
+                                })}
                             </section>
                             <section className="action">
                                 <button
