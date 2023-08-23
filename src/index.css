@@ -139,3 +139,13 @@
 }
 
 /* *Desktop state */
+
+@media (min-width: 400px) {
+    .card {
+        max-width: 400px;
+    }
+
+    .ratings {
+        gap: 1rem;
+    }
+}
