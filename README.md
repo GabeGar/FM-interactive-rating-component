@@ -48,10 +48,10 @@ Users should be able to:
 
 ### What I learned
 
-Doing this project helped me reinforce a few react-related concepts, such as conditional rendering of content.
-As well as, conditionally adding classes to re-usable components, that may differ their states, accordingly.
-(E.g., setting one button to gain the color orange as an active state, per the challenge,
-while the others remain unchanged).
+-   Doing this project helped me reinforce a few react-related concepts, such as conditional rendering of content.
+    As well as, conditionally adding classes to re-usable components, that may differ their states, accordingly.
+    (E.g., setting one button to gain the color orange as an active state, per the challenge,
+    while the others remain unchanged).
 
 ```js - react
 // * In RatingBtn.jsx file
@@ -70,7 +70,19 @@ const RatingBtn = ({ selectedRating, onHandleRating, value }) => {
 export default RatingBtn;
 ```
 
-Overall, a neat challenge through and through.
+-   Had an issue I had with mobile devices having 'sticky-like' hover effects. Solved after googling,
+    by appending one of my media queries w/ the following ---> and (pointer: fine).
+
+```css
+@media (hover: hover) and (pointer: fine) {
+    /* Hover styles in here */
+}
+```
+
+-   The above prevented hover styles on mobile devices with higher specificity, instead of relying on screen
+    size, like i did before.
+
+-   Overall, a neat challenge through and through.
 
 ## Author
 
