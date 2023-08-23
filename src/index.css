@@ -150,8 +150,7 @@
 
 /* *Desktop styles & states */
 
-@media (min-width: 400px) {
-
+@media (hover: hover) {
     .ratings>button:hover {
         font-weight: 700;
         color: var(--White);
@@ -162,6 +161,9 @@
         color: var(--Orange);
         background-color: var(--White);
     }
+}
+
+@media (min-width: 400px) {
 
     .card {
         max-width: 400px;
