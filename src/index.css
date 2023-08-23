@@ -150,7 +150,7 @@
 
 /* *Desktop styles & states */
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .ratings>button:hover {
         font-weight: 700;
         color: var(--White);
