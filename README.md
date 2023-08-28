@@ -70,8 +70,8 @@ const RatingBtn = ({ selectedRating, onHandleRating, value }) => {
 export default RatingBtn;
 ```
 
--   Had an issue I had with mobile devices having 'sticky-like' hover effects. Solved after googling,
-    by appending one of my media queries w/ the following ---> and (pointer: fine).
+-   Had an issue with mobile devices having 'sticky-like' hover effects, being applied to the rating buttons.
+    After some googling, solved this by appending one of my media queries w/ the following condition ---> and (pointer: fine).
 
 ```css
 @media (hover: hover) and (pointer: fine) {
